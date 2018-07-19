@@ -1,16 +1,18 @@
 let playerScore = 0;
 let computerScore = 0;
 
+const match = document.querySelector('.match');
+const score = document.querySelector('.score');
+
+
 function printMatch(text){
-	const content = document.querySelector('.match');
-	content.textContent = text;
+
+	match.textContent = text;
 
 }
 
 function printScore(text){
-	const content = document.querySelector('.score');
-	content.textContent = text;
-
+	score.textContent = text;
 }
 
 function playRound(p) {
@@ -88,20 +90,25 @@ function playGame(){
 	switch(result){
 			case 1:
 				playerScore++
+				match.setAttribute('style','color: green');
 				break;
 			case -1:
 				computerScore++;
+				match.setAttribute('style','color: red');
+				break;
+			case 0:
+				match.setAttribute('style', 'color: gray');
 	}
-	scoreLog = "player score: " + playerScore + " computer score " + computerScore;
+	scoreLog = "Player\'s score: " + playerScore + " Computer\'s score: " + computerScore;
 	printScore(scoreLog);
 	
 	if(playerScore > 4 || computerScore > 4){
 		var winner;
 		if(playerScore > computerScore){
-			winner = "player"
+			winner = "Player"
 		}
 		else{
-			winner = "computer"
+			winner = "Computer"
 		}
 		const result = document.createElement('div');
 		result.textContent = winner + " wins";

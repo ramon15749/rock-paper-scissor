@@ -1,11 +1,23 @@
+body{
+	font-family: 'Roboto Mono', monospace;
+}
+
+
+
 button{
-	background-color: yellow;
-	border: 1px solid black;
-	width: 100px;
-	height: 100px;
+	background-color: #f9e970;
+	border: 2px solid black;
+	width: 150px;
+	height: 150px;
 	margin: 0px 3px 0px 3px;
 	display: inline-block;
 	top: 50px;
+	font-size: 15px
+}
+
+.match, .score{
+	text-align: center;
+	padding: 10px 0px 0px 0px;
 }
 
 .buttons{
@@ -13,8 +25,7 @@ button{
   justify-content: center;
 }
 
-.click{
-	transform: scale(1.2, 1.2);
-	
-
+button:active{
+	transform: scale(1.1, 1.1);
 }
+
