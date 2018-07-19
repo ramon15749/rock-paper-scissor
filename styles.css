@@ -1,0 +1,20 @@
+button{
+	background-color: yellow;
+	border: 1px solid black;
+	width: 100px;
+	height: 100px;
+	margin: 0px 3px 0px 3px;
+	display: inline-block;
+	top: 50px;
+}
+
+.buttons{
+  display: flex;
+  justify-content: center;
+}
+
+.click{
+	transform: scale(1.2, 1.2);
+	
+
+}
